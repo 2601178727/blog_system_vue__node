@@ -17,12 +17,12 @@ const port = process.env.NODE_ENV === 'production' ? '80' : '3000'
 export default {
     env: process.env.NODE_ENV,
     port,
-    auth,
+    // auth,
     log,
     mongodb: {
-        username: 'cd',
-        pwd: 123456,
+        // username: 'root',
+        // pwd: 'root',
         address: 'localhost:27017',
-        db: 'test'
+        db: 'local'
     }
 }
