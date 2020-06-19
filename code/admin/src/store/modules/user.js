@@ -44,7 +44,8 @@ const user = {
 			return new Promise( (resolve, reject) => {
 				axios.post('user/login',{
 					username: username,
-					pwd: md5(pwd)
+					pwd: pwd
+					// pwd: md5(pwd)
 				}).then( res => {
 					// console.log(res)
 					state.token = getToken();

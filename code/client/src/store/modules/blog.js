@@ -31,6 +31,7 @@ const blog = {
             return new Promise( (resolve, reject) => {
                 axios.get('blog/list', params).
                     then( res => {
+                        
                         state.loadingMore = false;
                         resolve(res)
                         if (res.data.length <= 0 && params.pageindex > 1) return

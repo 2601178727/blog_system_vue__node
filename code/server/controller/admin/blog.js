@@ -21,6 +21,8 @@ module.exports = {
     async list (ctx, next) {
         console.log('----------------获取博客列表 blog/list-----------------------');
         let { keyword, pageindex = 1, pagesize = 10} = ctx.request.query;
+        let a = await blogModel.find({}, '')
+        console.log(a, 444)
         console.log('keyword:'+keyword+','+'pageindex:'+pageindex +','+ 'pagesize:'+pagesize)
         try {
             

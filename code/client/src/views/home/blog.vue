@@ -51,7 +51,7 @@
                 this.$store.dispatch('getBlogList', {
                     type: this.$route.params.classify,
                     pageindex: this.pageindex
-                })
+                }).then(res => console.log(res))
             }
         },
         computed: {

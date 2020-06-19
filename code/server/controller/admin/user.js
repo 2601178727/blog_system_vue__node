@@ -5,10 +5,9 @@ module.exports = {
     async login (ctx, next) {
         console.log('----------------登录接口 user/login-----------------------');
         let {username, pwd} = ctx.request.body;
-        console.log(username)
         try {
             let data = await ctx.findOne(userModel, {username: username});
-            console.log(data)
+
             if (!data) {
                 return ctx.sendError('用户名不存在！');
             }

@@ -47,7 +47,7 @@
                 }   
                 try {
                     await this.$store.dispatch('userLogin', this.loginInfo);
-                    this.$router.push('/home')
+                    this.$router.push('/home');
                 } catch (e) {
                     console.log(e)
                 }           
