@@ -28,7 +28,8 @@ const prod = merge({}, baseConf, {
         path: path.resolve(__dirname, `../public/${isAdmin ? 'admin' : 'client'}`),
 
         //html引用资源路径,可在此配置cdn引用地址！
-        publicPath: prodConf.publicPath,
+        publicPath: '/',
+        // publicPath: prodConf.publicPath,
 
         //文件名
         filename: assetsPath('js/[name].[chunkhash].js'),
