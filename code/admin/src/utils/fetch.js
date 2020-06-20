@@ -46,7 +46,8 @@ function checkCode(res) {
     return res
 }
 
-const prefix = '/admin_demo_api/'
+const prefix = 'http://yangyiyuan.online:3000/admin_demo_api/'
+// const prefix = '/admin_demo_api/'
 export default {
     get(url, params) {
         if (!url) return
