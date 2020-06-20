@@ -48,7 +48,7 @@ module.exports = {
         },
         build: {
             env: 'production',
-            publicPath: '../client/',
+            publicPath: './../client/',
             assetsPath: 'static',
             assetsSubDirectory: 'static',
             devtoolType: 'source-map',
