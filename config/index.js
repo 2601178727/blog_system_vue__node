@@ -48,7 +48,7 @@ module.exports = {
         },
         build: {
             env: 'production',
-            publicPath: '/client/',
+            publicPath: '/yyy/blog_system_vue__node/public/client/',
             assetsPath: 'static',
             assetsSubDirectory: 'static',
             devtoolType: 'source-map',
