@@ -19,7 +19,7 @@ module.exports = {
         },
         build: {
             env: 'production', // 当前环境
-            publicPath: './admin/', // html引用资源路径
+            publicPath: '/admin/', // html引用资源路径
             assetsPath: 'static', // 静态资源目录
             assetsSubDirectory: 'static', // html资源存放目录
             devtoolType: 'source-map', // 代码位置信息
@@ -48,7 +48,7 @@ module.exports = {
         },
         build: {
             env: 'production',
-            publicPath: './client/',
+            publicPath: '/client/',
             assetsPath: 'static',
             assetsSubDirectory: 'static',
             devtoolType: 'source-map',
