@@ -2,6 +2,7 @@
 node_modules/
 dist/
 logs/
+public/
 
 
 # Editor directories and files
