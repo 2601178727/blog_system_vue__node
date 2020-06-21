@@ -46,8 +46,7 @@
                     return;
                 }   
                 try {
-                    await this.$store.dispatch('getUserList', this.loginInfo);
-                    // await this.$store.dispatch('userLogin', this.loginInfo);
+                    await this.$store.dispatch('userLogin', this.loginInfo);
                     this.$router.push('/home');
                 } catch (e) {
                     console.log(e)
