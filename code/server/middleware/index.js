@@ -11,10 +11,13 @@ export default app => {
     //跨域
     app.use(async (ctx, next) => { 
         ctx.set('Access-Control-Allow-Origin', '*');
-        //Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
-        ctx.set('Access-Control-Allow-Headers', 'Content-Type');
-        ctx.set('Access-Control-Allow-Methods', '*');
-        ctx.set('Content-Type', 'application/x-www-form-urlencoded');
+        ctx.set('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+        ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+        if (ctx.method == 'OPTIONS') {
+            ctx.body = 200; 
+          } else {
+            await next();
+          }
         // ctx.set('Content-Type', 'application/json;charset=utf-8');
     })
     //缓存拦截器
