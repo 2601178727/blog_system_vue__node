@@ -14,7 +14,8 @@ export default app => {
         //Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
         ctx.set('Access-Control-Allow-Headers', 'Content-Type');
         ctx.set('Access-Control-Allow-Methods', '*');
-        ctx.set('Content-Type', 'application/json;charset=utf-8');
+        ctx.set('Content-Type', 'application/x-www-form-urlencoded');
+        // ctx.set('Content-Type', 'application/json;charset=utf-8');
     })
     //缓存拦截器
     app.use(async (ctx, next) => { 
