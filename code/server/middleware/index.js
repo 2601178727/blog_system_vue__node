@@ -6,18 +6,16 @@ import Send from './send'
 import Auth from './auth'
 import Log from './log'
 import Func from './func'
-const cors = require('koa-cors')
 
 export default app => {
     //跨域
-    app.use(cors());
-    /* app.use(async (ctx, next) => { 
-        ctx.header('Access-Control-Allow-Origin', '*');
+    app.use(async (ctx, next) => { 
+        ctx.set('Access-Control-Allow-Origin', '*');
         //Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
-        ctx.header('Access-Control-Allow-Headers', 'Content-Type');
-        ctx.header('Access-Control-Allow-Methods', '*');
-        ctx.header('Content-Type', 'application/json;charset=utf-8');
-    }) */
+        ctx.set('Access-Control-Allow-Headers', 'Content-Type');
+        ctx.set('Access-Control-Allow-Methods', '*');
+        ctx.set('Content-Type', 'application/json;charset=utf-8');
+    })
     //缓存拦截器
     app.use(async (ctx, next) => { 
         if (ctx.url == '/favicon.ico') return
