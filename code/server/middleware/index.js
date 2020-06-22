@@ -11,7 +11,7 @@ export default app => {
     //跨域
     app.use(async (ctx, next) => {
         ctx.set('Access-Control-Allow-Credentials', 'true');
-        ctx.set('Access-Control-Allow-Origin', ['http://yangyiyuan.online','http://yangyiyuan.online:9527']);
+        ctx.set('Access-Control-Allow-Origin', 'http://yangyiyuan.online');
         // ctx.set('Access-Control-Allow-Origin', 'http://yangyiyuan.online:9527');
         // ctx.set('Access-Control-Allow-Origin', 'http://172.17.142.26');
         // ctx.set('Access-Control-Allow-Origin', 'http://172.17.142.26:9527');
