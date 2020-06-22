@@ -9,8 +9,10 @@ import Func from './func'
 
 export default app => {
     //跨域
-    app.use(async (ctx, next) => { 
-        ctx.set('Access-Control-Allow-Origin', '*');
+    app.use(async (ctx, next) => {
+        ctx.set('Access-Control-Allow-Credentials', 'true');
+        ctx.set('Access-Control-Allow-Origin', ctx.environ['HTTP_ORIGIN']);
+        // ctx.set('Access-Control-Allow-Origin', '*');
         ctx.set('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Authorization , Access-Control-Request-Headers');
         ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
         if (ctx.method == 'OPTIONS') {
