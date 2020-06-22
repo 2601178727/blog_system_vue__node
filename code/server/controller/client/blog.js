@@ -7,8 +7,8 @@ module.exports = {
         let { type = null, pageindex = 1, pagesize = 5} = ctx.request.query;
         console.log('type:'+type+','+'pageindex:'+pageindex +','+ 'pagesize:'+pagesize)
         try {
-            
-            let data = await ctx.find(blogModel, {type, isVisible: true, source: 1}, null, {limit: pagesize*1, skip: (pageindex-1)*pagesize, sort: {level: -1, createTime: -1}});
+            let filter = type ? {type, isVisible: true, source: 1} : {isVisible: true, source: 1}
+            let data = await ctx.find(blogModel, filter, null, {limit: pagesize*1, skip: (pageindex-1)*pagesize, sort: {level: -1, createTime: -1}});
             return ctx.send(data)
         }catch (e){
             console.log(e)
