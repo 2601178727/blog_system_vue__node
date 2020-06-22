@@ -12,9 +12,9 @@ export default app => {
     app.use(async (ctx, next) => {
         ctx.set('Access-Control-Allow-Credentials', 'true');
         ctx.set('Access-Control-Allow-Origin', 'http://yangyiyuan.online');
-        ctx.set('Access-Control-Allow-Origin', 'http://yangyiyuan.online:9527');
-        ctx.set('Access-Control-Allow-Origin', 'http://172.17.142.26');
-        ctx.set('Access-Control-Allow-Origin', 'http://172.17.142.26:9527');
+        // ctx.set('Access-Control-Allow-Origin', 'http://yangyiyuan.online:9527');
+        // ctx.set('Access-Control-Allow-Origin', 'http://172.17.142.26');
+        // ctx.set('Access-Control-Allow-Origin', 'http://172.17.142.26:9527');
         // ctx.set('Access-Control-Allow-Origin', '*');
         ctx.set('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Authorization , Access-Control-Request-Headers');
         ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
