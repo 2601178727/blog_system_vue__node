@@ -20,8 +20,8 @@ export default {
     auth,
     log,
     mongodb: {
-        // username: 'root',
-        // pwd: 'root',
+        username: 'yyy',
+        pwd: 'xiaotong4421',
         address: 'localhost:27017',
         db: 'blog'
     }
